@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     /**
      * If request is ajax returns view containing data string.
-     * Otherwise retuns landing page view fit form.
+     * Otherwise retuns landing page view with form.
      * @return  view
      */
     public function parse()

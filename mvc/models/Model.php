@@ -21,9 +21,10 @@ class Model
             $css = $_POST['css'];
 
             $html = file_get_html($url);
+
             // If we get the empty array as a result, we can assume
-            // that user inputed css selector the doesn't exist
-            // on the given page, so we need to bail out!
+            // that user inputed css selector does not exist
+            // on the page, so we need to bail out!
             if ($html->find($css) == []) {
                 return '<script>alert("No search rsults found with param: ' . $css . '");</script>';
             }
