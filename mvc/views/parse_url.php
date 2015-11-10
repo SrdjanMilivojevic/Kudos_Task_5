@@ -26,11 +26,11 @@
                      <form role="form" id="form" method="POST" action="">
                         <div class="form-group">
                             <label for="url">Url: </label>
-                            <input type="text" name="url" class="form-control" id="url">
+                            <input type="text" name="url" class="form-control" id="url" value="http://www.polovniautomobili.com/putnicka-vozila/pretraga?without_price=1&showOldNew=all">
                         </div>
                         <div class="form-group">
                             <label for="css">Css selector: </label>
-                            <input type="text" name="css" class="form-control" id="css">
+                            <input type="text" name="css" class="form-control" id="css" value=".item">
                         </div>
                         <button type="submit" class="btn btn-default" id="submit">Submit</button>
                     </form>

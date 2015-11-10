@@ -32,7 +32,8 @@ class Model
             $render = '<div class="row" id="innerWrap">';
 
             foreach ($html->find($css) as $element) {
-                $render .= $element->innertext . '<br>';
+
+                $render .= $element->innertext . '<hr>';
             }
 
             $render .= '</div>';
