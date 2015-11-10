@@ -16,7 +16,7 @@ class Model
      */
     public function ajax()
     {
-        if (isset($_POST['url'], $_POST['css']) && $_POST['url'] != '' && $_POST['css'] != '') {
+        if ($_POST['url'] != '' && $_POST['css'] != '') {
             $url = $_POST['url'];
             $css = $_POST['css'];
 

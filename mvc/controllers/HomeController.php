@@ -27,13 +27,24 @@ class HomeController extends Controller
      */
     public function parse()
     {
-        // Call the Model
-        $render = $this->model('model')->ajax();
         // Check if request is ajax.
-        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        if ($this->isAjax()) {
+
+            // Call the Model
+            $render = $this->model('model')->ajax();
+
             return $this->view('scraped_data', compact('render'));
         }
 
         return $this->view('parse_url');
+    }
+
+    /**
+     * Checks if request is ajax.
+     * @return boolean
+     */
+    private function isAjax()
+    {
+        return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ? true : false;
     }
 }
