@@ -34,7 +34,7 @@ class Model
             // that user inputed css selector does not exist
             // on the page, so we need to bail out!
             if ($html->find($css) == []) {
-                return '<script>alert("No search rsults found with param: ' . $css . '");</script>';
+                return '<script>alert("No search results found with param: ' . $css . '");</script>';
             }
 
             $render = '<div class="row" id="innerWrap">';
