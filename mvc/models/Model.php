@@ -3,6 +3,14 @@
 class Model
 {
 
+    /**
+     *  Include the library that we require for our app.
+     */
+    public function __construct()
+    {
+        require ROOT . 'lib/simple_html_dom.php';
+    }
+
     public function test($string)
     {
         return $string;

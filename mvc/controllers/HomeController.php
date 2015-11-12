@@ -3,14 +3,6 @@
 class HomeController extends Controller
 {
     /**
-     *  Include the library that we require for our app.
-     */
-    public function __construct()
-    {
-        require ROOT . 'lib/simple_html_dom.php';
-    }
-
-    /**
      * Just a test
      * @return view
      */
